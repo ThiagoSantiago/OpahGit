@@ -15,6 +15,13 @@
 		39C5A1E1265AB925004F54E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A1DF265AB925004F54E1 /* LaunchScreen.storyboard */; };
 		39C5A1EC265AB925004F54E1 /* OpahGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A1EB265AB925004F54E1 /* OpahGitTests.swift */; };
 		39C5A1F7265AB925004F54E1 /* OpahGitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A1F6265AB925004F54E1 /* OpahGitUITests.swift */; };
+		39C5A206265ABAA6004F54E1 /* OpahApiSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */; };
+		39C5A208265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */; };
+		39C5A20A265ABEA0004F54E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A209265ABEA0004F54E1 /* Constants.swift */; };
+		39C5A20C265ABFA3004F54E1 /* OpahUserServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */; };
+		39C5A20E265AC074004F54E1 /* OpahUserReposServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */; };
+		39C5A210265AF734004F54E1 /* OpahApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20F265AF734004F54E1 /* OpahApiError.swift */; };
+		39C5A212265AF7B7004F54E1 /* OpahApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		39C5A1F2265AB925004F54E1 /* OpahGitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpahGitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C5A1F6265AB925004F54E1 /* OpahGitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahGitUITests.swift; sourceTree = "<group>"; };
 		39C5A1F8265AB925004F54E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiSetupProtocol.swift; sourceTree = "<group>"; };
+		39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUsersListServiceSetup.swift; sourceTree = "<group>"; };
+		39C5A209265ABEA0004F54E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserServiceSetup.swift; sourceTree = "<group>"; };
+		39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserReposServiceSetup.swift; sourceTree = "<group>"; };
+		39C5A20F265AF734004F54E1 /* OpahApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiError.swift; sourceTree = "<group>"; };
+		39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		39C5A1D3265AB924004F54E1 /* OpahGit */ = {
 			isa = PBXGroup;
 			children = (
+				39C5A204265ABA74004F54E1 /* Network */,
 				39C5A1D4265AB924004F54E1 /* AppDelegate.swift */,
 				39C5A1D6265AB924004F54E1 /* SceneDelegate.swift */,
 				39C5A1D8265AB924004F54E1 /* ViewController.swift */,
@@ -106,6 +121,7 @@
 				39C5A1DD265AB925004F54E1 /* Assets.xcassets */,
 				39C5A1DF265AB925004F54E1 /* LaunchScreen.storyboard */,
 				39C5A1E2265AB925004F54E1 /* Info.plist */,
+				39C5A209265ABEA0004F54E1 /* Constants.swift */,
 			);
 			path = OpahGit;
 			sourceTree = "<group>";
@@ -126,6 +142,19 @@
 				39C5A1F8265AB925004F54E1 /* Info.plist */,
 			);
 			path = OpahGitUITests;
+			sourceTree = "<group>";
+		};
+		39C5A204265ABA74004F54E1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */,
+				39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */,
+				39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */,
+				39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */,
+				39C5A20F265AF734004F54E1 /* OpahApiError.swift */,
+				39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +288,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				39C5A1D9265AB924004F54E1 /* ViewController.swift in Sources */,
+				39C5A210265AF734004F54E1 /* OpahApiError.swift in Sources */,
+				39C5A206265ABAA6004F54E1 /* OpahApiSetupProtocol.swift in Sources */,
 				39C5A1D5265AB924004F54E1 /* AppDelegate.swift in Sources */,
+				39C5A212265AF7B7004F54E1 /* OpahApiRequest.swift in Sources */,
 				39C5A1D7265AB924004F54E1 /* SceneDelegate.swift in Sources */,
+				39C5A20E265AC074004F54E1 /* OpahUserReposServiceSetup.swift in Sources */,
+				39C5A208265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift in Sources */,
+				39C5A20A265ABEA0004F54E1 /* Constants.swift in Sources */,
+				39C5A20C265ABFA3004F54E1 /* OpahUserServiceSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
