@@ -8,15 +8,21 @@
 import Foundation
 
 protocol OpahUsersListInteracting: AnyObject {
+    var isSearching: Bool { get }
     func loadData()
     func getNextPage()
     func resetPages()
+    func stopSearching()
+    func searchUser(name: String)
 }
 
 final class OpahUsersListInteractor: OpahUsersListInteracting {
+    var isSearching = false
+    
     private let presenter: OpahUsersListPresenting
     private var currentPage = 1
     private var showFooterLoad = false
+    private var usersList: UsersList = []
     
     init(presenter: OpahUsersListPresenting) {
         self.presenter = presenter
@@ -43,9 +49,10 @@ final class OpahUsersListInteractor: OpahUsersListInteracting {
                 do {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let usersList = try decoder.decode(UsersList.self, from: data)
+                    let list = try decoder.decode(UsersList.self, from: data)
+                    self.usersList.append(contentsOf: list)
                     DispatchQueue.main.async {
-                        self.presenter.presentUsersList(users: usersList)
+                        self.presenter.presentUsersList(users: self.usersList)
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -69,5 +76,20 @@ final class OpahUsersListInteractor: OpahUsersListInteracting {
     func resetPages() {
         showFooterLoad = false
         currentPage = 1
+    }
+    
+    func searchUser(name: String) {
+        isSearching = true
+        if name.isEmpty {
+            presenter.presentUsersList(users: usersList)
+        } else {
+            let filteredList = usersList.filter { $0.login.uppercased().contains(name.uppercased()) }
+            presenter.presentUsersList(users: filteredList)
+        }
+    }
+    
+    func stopSearching() {
+        isSearching = false
+        presenter.presentUsersList(users: usersList)
     }
 }

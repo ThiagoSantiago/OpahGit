@@ -48,7 +48,7 @@ final class OpahUsersListView: BaseViewController {
         super.viewDidLoad()
         interactor.resetPages()
         interactor.loadData()
-        configTableView()
+        configView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,16 +56,23 @@ final class OpahUsersListView: BaseViewController {
         title = Strings.viewTitle
     }
     
-    private func configTableView() {
+    private func configView() {
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        searchBar?.delegate = self
+        searchBar?.showsCancelButton = true
         
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.layer.bounds.width, height: 50))
         
         loader.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         loader.center = customView.center
+        loader.stopAnimating()
         customView.addSubview(loader)
         tableView?.tableFooterView = customView
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tap)
     }
 }
 
@@ -77,7 +84,7 @@ extension OpahUsersListView: OpahUsersListDisplaying {
     }
     
     func showUsersList(list: [UserDto]) {
-        usersList.append(contentsOf: list)
+        usersList = list
         tableView?.reloadData()
     }
     
@@ -104,11 +111,29 @@ extension OpahUsersListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = usersList[indexPath.row].login
-
-        if indexPath.row == usersList.count - 1 {
+    
+        if indexPath.row == usersList.count - 1 && !interactor.isSearching {
             interactor.getNextPage()
         }
         
         return cell
+    }
+}
+
+extension OpahUsersListView: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        interactor.searchUser(name: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        hideKeyboard()
+    }
+    
+    @objc
+    func hideKeyboard() {
+        interactor.stopSearching()
+        searchBar?.resignFirstResponder()
     }
 }
