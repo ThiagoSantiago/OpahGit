@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpahUsersListView" customModule="OpahGit" customModuleProvider="target">
             <connections>
                 <outlet property="searchBar" destination="Hdd-vp-stc" id="AGX-FI-LvM"/>
-                <outlet property="tableView" destination="xCA-HW-xMo" id="7c5-bR-mAm"/>
+                <outlet property="tableView" destination="lnX-ex-rkp" id="fTK-Qj-MB9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="r3t-pc-pg5"/>
             </connections>
         </placeholder>
@@ -27,7 +27,7 @@
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xCA-HW-xMo">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-ex-rkp">
                     <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -35,13 +35,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="xCA-HW-xMo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5wI-9k-QHH"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xCA-HW-xMo" secondAttribute="trailing" id="Aml-ox-2Se"/>
+                <constraint firstItem="lnX-ex-rkp" firstAttribute="top" secondItem="Hdd-vp-stc" secondAttribute="bottom" id="78y-vp-lgp"/>
                 <constraint firstItem="Hdd-vp-stc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IFa-S5-yUX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xCA-HW-xMo" secondAttribute="bottom" id="QIB-Bx-ylL"/>
                 <constraint firstItem="Hdd-vp-stc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="SeA-GH-nBJ"/>
                 <constraint firstItem="Hdd-vp-stc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vx2-4E-iNc"/>
-                <constraint firstItem="xCA-HW-xMo" firstAttribute="top" secondItem="Hdd-vp-stc" secondAttribute="bottom" id="fLo-5x-Ll1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lnX-ex-rkp" secondAttribute="bottom" id="lAO-VG-tXd"/>
+                <constraint firstItem="lnX-ex-rkp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mx4-HQ-upE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lnX-ex-rkp" secondAttribute="trailing" id="tmz-90-Noq"/>
             </constraints>
             <point key="canvasLocation" x="139" y="56"/>
         </view>

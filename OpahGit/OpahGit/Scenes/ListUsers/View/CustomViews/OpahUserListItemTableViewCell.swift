@@ -14,5 +14,11 @@ class OpahUserListItemTableViewCell: UITableViewCell {
     
     func setContent(user: UserDto) {
         userNameLabel?.text = user.login
+        userImage?.loadImage(from: user.imageUrl)
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        super.setSelected(false, animated: true)
     }
 }

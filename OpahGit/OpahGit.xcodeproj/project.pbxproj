@@ -38,6 +38,8 @@
 		39C5A246265C22D6004F54E1 /* OpahUserListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A244265C22D6004F54E1 /* OpahUserListItemTableViewCell.xib */; };
 		39C5A248265C347C004F54E1 /* OpahUserServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A247265C347C004F54E1 /* OpahUserServiceSetup.swift */; };
 		39C5A24A265C3648004F54E1 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A249265C3648004F54E1 /* UserDetail.swift */; };
+		39C5A24C265C439D004F54E1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A24B265C439D004F54E1 /* ImageDownloader.swift */; };
+		39C5A24E265C448D004F54E1 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A24D265C448D004F54E1 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		39C5A244265C22D6004F54E1 /* OpahUserListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpahUserListItemTableViewCell.xib; sourceTree = "<group>"; };
 		39C5A247265C347C004F54E1 /* OpahUserServiceSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpahUserServiceSetup.swift; sourceTree = "<group>"; };
 		39C5A249265C3648004F54E1 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		39C5A24B265C439D004F54E1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		39C5A24D265C448D004F54E1 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 				39C5A1E2265AB925004F54E1 /* Info.plist */,
 				39C5A209265ABEA0004F54E1 /* Constants.swift */,
 				39C5A21B265AFE80004F54E1 /* BaseViewController.swift */,
+				39C5A24D265C448D004F54E1 /* UIImageView+Extension.swift */,
 			);
 			path = OpahGit;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */,
 				39C5A20F265AF734004F54E1 /* OpahApiError.swift */,
 				39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */,
+				39C5A24B265C439D004F54E1 /* ImageDownloader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 			files = (
 				39C5A23F265B5738004F54E1 /* OpahUserDetailsFactory.swift in Sources */,
 				39C5A21C265AFE80004F54E1 /* BaseViewController.swift in Sources */,
+				39C5A24E265C448D004F54E1 /* UIImageView+Extension.swift in Sources */,
 				39C5A226265B01DD004F54E1 /* OpahUsersListPresenter.swift in Sources */,
 				39C5A223265B0144004F54E1 /* OpahUsersListInteractor.swift in Sources */,
 				39C5A210265AF734004F54E1 /* OpahApiError.swift in Sources */,
@@ -452,6 +459,7 @@
 				39C5A23D265B5377004F54E1 /* OpahUserDetailsPresenter.swift in Sources */,
 				39C5A248265C347C004F54E1 /* OpahUserServiceSetup.swift in Sources */,
 				39C5A21F265B004F004F54E1 /* OpahUsersListDefinitions.swift in Sources */,
+				39C5A24C265C439D004F54E1 /* ImageDownloader.swift in Sources */,
 				39C5A241265C1FC2004F54E1 /* OpahUserDetailsDefinitions.swift in Sources */,
 				39C5A212265AF7B7004F54E1 /* OpahApiRequest.swift in Sources */,
 				39C5A229265B0646004F54E1 /* UsersList.swift in Sources */,

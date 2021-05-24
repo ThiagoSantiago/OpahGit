@@ -13,6 +13,10 @@ struct OpahUsersListDefinitions {
         static let viewTitle = "Lista de usuários"
         static let errorTitle = "Oops!"
     }
+    
+    struct Ints {
+        static let cellHeight: Int = 80
+    }
 }
 
 struct UserDto {

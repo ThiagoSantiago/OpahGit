@@ -82,6 +82,7 @@ extension OpahUserDetailsView: OpahUserDetailsDisplaying {
         userCompanyLabel?.text = "Company: \(userDetail.company)"
         userLocationLabel?.text = "Location: \(userDetail.location)"
         useremailLabel?.text = "Email: \(userDetail.email)"
+        userImage?.loadImage(from: userDetail.imageUrl)
     }
 }
 

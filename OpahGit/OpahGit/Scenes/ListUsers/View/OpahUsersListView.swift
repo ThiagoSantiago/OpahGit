@@ -21,6 +21,7 @@ final class OpahUsersListView: BaseViewController {
     // MARK: - Alias
     
     typealias Strings = OpahUsersListDefinitions.Strings
+    typealias Ints = OpahUsersListDefinitions.Ints
     
     // MARK: - Outlets
     
@@ -71,10 +72,6 @@ final class OpahUsersListView: BaseViewController {
         loader.stopAnimating()
         customView.addSubview(loader)
         tableView?.tableFooterView = customView
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        view.addGestureRecognizer(tap)
-        
     }
 }
 
@@ -126,10 +123,11 @@ extension OpahUsersListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         interactor.showUserDetail(userName: usersList[indexPath.row].login)
+        hideKeyboard()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.estimatedRowHeight
+        return CGFloat(Ints.cellHeight)
     }
 }
 
@@ -143,7 +141,6 @@ extension OpahUsersListView: UISearchBarDelegate {
         hideKeyboard()
     }
     
-    @objc
     func hideKeyboard() {
         interactor.stopSearching()
         searchBar?.resignFirstResponder()
