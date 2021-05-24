@@ -21,6 +21,10 @@ enum OpahUserReposServiceSetup: OpahApiSetupProtocol {
         }
     }
     
+    var headers: [String : String] {
+        return ["Content-Type":"application/json"]
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .getUserRepos:

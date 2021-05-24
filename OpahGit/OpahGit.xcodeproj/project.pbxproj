@@ -15,7 +15,6 @@
 		39C5A206265ABAA6004F54E1 /* OpahApiSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */; };
 		39C5A208265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */; };
 		39C5A20A265ABEA0004F54E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A209265ABEA0004F54E1 /* Constants.swift */; };
-		39C5A20C265ABFA3004F54E1 /* OpahUserServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */; };
 		39C5A20E265AC074004F54E1 /* OpahUserReposServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */; };
 		39C5A210265AF734004F54E1 /* OpahApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A20F265AF734004F54E1 /* OpahApiError.swift */; };
 		39C5A212265AF7B7004F54E1 /* OpahApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */; };
@@ -28,6 +27,12 @@
 		39C5A229265B0646004F54E1 /* UsersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A228265B0646004F54E1 /* UsersList.swift */; };
 		39C5A22C265B0B04004F54E1 /* OpahUsersListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A22B265B0B04004F54E1 /* OpahUsersListFactory.swift */; };
 		39C5A22E265B18C6004F54E1 /* OpahUsersListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A22D265B18C6004F54E1 /* OpahUsersListView.xib */; };
+		39C5A233265B48CE004F54E1 /* OpahUserDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A232265B48CE004F54E1 /* OpahUserDetailsView.xib */; };
+		39C5A235265B48E5004F54E1 /* OpahUserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A234265B48E5004F54E1 /* OpahUserDetailsView.swift */; };
+		39C5A239265B4DD3004F54E1 /* OpahUserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A238265B4DD3004F54E1 /* OpahUserDetailsInteractor.swift */; };
+		39C5A23B265B509D004F54E1 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A23A265B509D004F54E1 /* UserRepos.swift */; };
+		39C5A23D265B5377004F54E1 /* OpahUserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A23C265B5377004F54E1 /* OpahUserDetailsPresenter.swift */; };
+		39C5A23F265B5738004F54E1 /* OpahUserDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A23E265B5738004F54E1 /* OpahUserDetailsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +67,6 @@
 		39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiSetupProtocol.swift; sourceTree = "<group>"; };
 		39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUsersListServiceSetup.swift; sourceTree = "<group>"; };
 		39C5A209265ABEA0004F54E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserServiceSetup.swift; sourceTree = "<group>"; };
 		39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserReposServiceSetup.swift; sourceTree = "<group>"; };
 		39C5A20F265AF734004F54E1 /* OpahApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiError.swift; sourceTree = "<group>"; };
 		39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahApiRequest.swift; sourceTree = "<group>"; };
@@ -75,6 +79,12 @@
 		39C5A228265B0646004F54E1 /* UsersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersList.swift; sourceTree = "<group>"; };
 		39C5A22B265B0B04004F54E1 /* OpahUsersListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUsersListFactory.swift; sourceTree = "<group>"; };
 		39C5A22D265B18C6004F54E1 /* OpahUsersListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpahUsersListView.xib; sourceTree = "<group>"; };
+		39C5A232265B48CE004F54E1 /* OpahUserDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpahUserDetailsView.xib; sourceTree = "<group>"; };
+		39C5A234265B48E5004F54E1 /* OpahUserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserDetailsView.swift; sourceTree = "<group>"; };
+		39C5A238265B4DD3004F54E1 /* OpahUserDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserDetailsInteractor.swift; sourceTree = "<group>"; };
+		39C5A23A265B509D004F54E1 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
+		39C5A23C265B5377004F54E1 /* OpahUserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserDetailsPresenter.swift; sourceTree = "<group>"; };
+		39C5A23E265B5738004F54E1 /* OpahUserDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserDetailsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +172,6 @@
 				39C5A227265B0621004F54E1 /* Models */,
 				39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */,
 				39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */,
-				39C5A20B265ABFA3004F54E1 /* OpahUserServiceSetup.swift */,
 				39C5A20D265AC074004F54E1 /* OpahUserReposServiceSetup.swift */,
 				39C5A20F265AF734004F54E1 /* OpahApiError.swift */,
 				39C5A211265AF7B7004F54E1 /* OpahApiRequest.swift */,
@@ -173,10 +182,8 @@
 		39C5A213265AFA7D004F54E1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				39C5A224265B01CD004F54E1 /* Presenter */,
-				39C5A221265B0127004F54E1 /* Interactor */,
-				39C5A21D265B0002004F54E1 /* View */,
-				39C5A21E265B004F004F54E1 /* OpahUsersListDefinitions.swift */,
+				39C5A230265B4849004F54E1 /* UserDetail */,
+				39C5A22F265B4830004F54E1 /* ListUsers */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -193,18 +200,10 @@
 		39C5A21D265B0002004F54E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				39C5A220265B00FD004F54E1 /* CustomView */,
 				39C5A219265AFD89004F54E1 /* OpahUsersListView.swift */,
 				39C5A22D265B18C6004F54E1 /* OpahUsersListView.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		39C5A220265B00FD004F54E1 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomView;
 			sourceTree = "<group>";
 		};
 		39C5A221265B0127004F54E1 /* Interactor */ = {
@@ -227,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				39C5A228265B0646004F54E1 /* UsersList.swift */,
+				39C5A23A265B509D004F54E1 /* UserRepos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,8 +235,55 @@
 			isa = PBXGroup;
 			children = (
 				39C5A22B265B0B04004F54E1 /* OpahUsersListFactory.swift */,
+				39C5A23E265B5738004F54E1 /* OpahUserDetailsFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		39C5A22F265B4830004F54E1 /* ListUsers */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A224265B01CD004F54E1 /* Presenter */,
+				39C5A221265B0127004F54E1 /* Interactor */,
+				39C5A21D265B0002004F54E1 /* View */,
+				39C5A21E265B004F004F54E1 /* OpahUsersListDefinitions.swift */,
+			);
+			path = ListUsers;
+			sourceTree = "<group>";
+		};
+		39C5A230265B4849004F54E1 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A237265B4C21004F54E1 /* Interactor */,
+				39C5A236265B4C19004F54E1 /* Presenter */,
+				39C5A231265B489C004F54E1 /* View */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		39C5A231265B489C004F54E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A232265B48CE004F54E1 /* OpahUserDetailsView.xib */,
+				39C5A234265B48E5004F54E1 /* OpahUserDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39C5A236265B4C19004F54E1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A23C265B5377004F54E1 /* OpahUserDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		39C5A237265B4C21004F54E1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A238265B4DD3004F54E1 /* OpahUserDetailsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C5A233265B48CE004F54E1 /* OpahUserDetailsView.xib in Resources */,
 				39C5A1E1265AB925004F54E1 /* LaunchScreen.storyboard in Resources */,
 				39C5A22E265B18C6004F54E1 /* OpahUsersListView.xib in Resources */,
 				39C5A1DE265AB925004F54E1 /* Assets.xcassets in Resources */,
@@ -369,22 +417,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C5A23F265B5738004F54E1 /* OpahUserDetailsFactory.swift in Sources */,
 				39C5A21C265AFE80004F54E1 /* BaseViewController.swift in Sources */,
 				39C5A226265B01DD004F54E1 /* OpahUsersListPresenter.swift in Sources */,
 				39C5A223265B0144004F54E1 /* OpahUsersListInteractor.swift in Sources */,
 				39C5A210265AF734004F54E1 /* OpahApiError.swift in Sources */,
 				39C5A206265ABAA6004F54E1 /* OpahApiSetupProtocol.swift in Sources */,
 				39C5A1D5265AB924004F54E1 /* AppDelegate.swift in Sources */,
+				39C5A239265B4DD3004F54E1 /* OpahUserDetailsInteractor.swift in Sources */,
+				39C5A23D265B5377004F54E1 /* OpahUserDetailsPresenter.swift in Sources */,
 				39C5A21F265B004F004F54E1 /* OpahUsersListDefinitions.swift in Sources */,
 				39C5A212265AF7B7004F54E1 /* OpahApiRequest.swift in Sources */,
 				39C5A229265B0646004F54E1 /* UsersList.swift in Sources */,
 				39C5A20E265AC074004F54E1 /* OpahUserReposServiceSetup.swift in Sources */,
 				39C5A216265AFCD8004F54E1 /* AppRouter.swift in Sources */,
 				39C5A208265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift in Sources */,
+				39C5A23B265B509D004F54E1 /* UserRepos.swift in Sources */,
+				39C5A235265B48E5004F54E1 /* OpahUserDetailsView.swift in Sources */,
 				39C5A21A265AFD89004F54E1 /* OpahUsersListView.swift in Sources */,
 				39C5A20A265ABEA0004F54E1 /* Constants.swift in Sources */,
 				39C5A22C265B0B04004F54E1 /* OpahUsersListFactory.swift in Sources */,
-				39C5A20C265ABFA3004F54E1 /* OpahUserServiceSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

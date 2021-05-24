@@ -17,4 +17,9 @@ class AppRouter {
         let viewController = OpahUsersListFactory.make()
         self.navigation.pushViewController(viewController, animated: false)
     }
+    
+    func routeToUserDetails(name: String) {
+        let viewController = OpahUserDetailsFactory.make(userName: name)
+        self.navigation.pushViewController(viewController, animated: true)
+    }
 }
