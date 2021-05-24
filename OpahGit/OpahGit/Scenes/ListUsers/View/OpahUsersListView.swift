@@ -59,6 +59,7 @@ final class OpahUsersListView: BaseViewController {
     private func configView() {
         tableView?.delegate = self
         tableView?.dataSource = self
+        tableView?.register(UINib(nibName: "OpahUserListItemTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "OpahUserListItemTableViewCell")
         
         searchBar?.delegate = self
         searchBar?.showsCancelButton = true
@@ -73,6 +74,7 @@ final class OpahUsersListView: BaseViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tap)
+        
     }
 }
 
@@ -109,8 +111,11 @@ extension OpahUsersListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = usersList[indexPath.row].login
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OpahUserListItemTableViewCell", for: indexPath) as? OpahUserListItemTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.setContent(user: usersList[indexPath.row])
     
         if indexPath.row == usersList.count - 1 && !interactor.isSearching {
             interactor.getNextPage()
@@ -118,10 +123,17 @@ extension OpahUsersListView: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.showUserDetail(userName: usersList[indexPath.row].login)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.estimatedRowHeight
+    }
 }
 
 extension OpahUsersListView: UISearchBarDelegate {
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         interactor.searchUser(name: searchText)
     }

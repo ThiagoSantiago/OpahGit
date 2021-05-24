@@ -12,13 +12,18 @@ protocol OpahUserDetailsPresenting: AnyObject {
     func presentReposList(repos: UserReposList)
     func presentLoading(isLoading: Bool)
     func presentError(error: OpahApiError)
+    func presentUserDetail(user: UserDetail)
 }
 
 final class OpahUserDetailsPresenter: OpahUserDetailsPresenting {
     weak var viewController: OpahUserDetailsDisplaying?
     
     func presentReposList(repos: UserReposList) {
-        viewController?.showUserReposList(list: [])
+        let repoList = repos.map { RepoDto(name: $0.name,
+                                           fullName: $0.fullName,
+                                           description: $0.description ?? "")
+        }
+        viewController?.showUserReposList(list: repoList)
     }
     
     func presentLoading(isLoading: Bool) {
@@ -27,5 +32,15 @@ final class OpahUserDetailsPresenter: OpahUserDetailsPresenting {
     
     func presentError(error: OpahApiError) {
         viewController?.showError(message: error.localizedDescription)
+    }
+    
+    func presentUserDetail(user: UserDetail) {
+        let userDetrail = UserDetailDto(name: user.name ?? "Not informed",
+                                        company: user.company ?? "Not informed",
+                                        location: user.location ?? "Not informed",
+                                        email: user.email ?? "Not informed",
+                                        imageUrl: user.avatarUrl ?? "Not informed")
+        
+        viewController?.displayUserDetails(userDetail: userDetrail)
     }
 }

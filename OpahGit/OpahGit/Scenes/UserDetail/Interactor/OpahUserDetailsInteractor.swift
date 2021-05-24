@@ -22,7 +22,40 @@ final class OpahUserDetailsInteractor: OpahUserDetailsInteracting {
     }
     
     func loadData() {
-        OpahApiRequest().request(OpahUserReposServiceSetup.getUserRepos(name: userName)) {[weak self] result in
+        requestUserDetails()
+        requestUserRepos()
+    }
+    
+    private func requestUserDetails() {
+        presenter.presentLoading(isLoading: true)
+        OpahApiRequest().request(OpahUserServiceSetup.getUser(name: userName)) { [weak self] result in
+            guard let self = self else { return }
+            self.presenter.presentLoading(isLoading: false)
+            
+            switch result {
+            case let .success(data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let user = try decoder.decode(UserDetail.self, from: data)
+                    DispatchQueue.main.async {
+                        self.presenter.presentUserDetail(user: user)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.presenter.presentError(error: .couldNotParseObject)
+                    }
+                }
+            case let .failure(error):
+                DispatchQueue.main.async {
+                    self.presenter.presentError(error: error)
+                }
+            }
+        }
+    }
+    
+    private func requestUserRepos() {
+        OpahApiRequest().request(OpahUserReposServiceSetup.getUserRepos(name: userName)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(data):
@@ -45,5 +78,4 @@ final class OpahUserDetailsInteractor: OpahUserDetailsInteracting {
             }
         }
     }
-    
 }

@@ -14,6 +14,7 @@ protocol OpahUsersListPresenting: AnyObject {
     func presentError(error: OpahApiError)
     func presentFooterLoading()
     func removeFooterLoading()
+    func presentUserDetails(name: String)
 }
 
 final class OpahUsersListPresenter: OpahUsersListPresenting {
@@ -41,5 +42,9 @@ final class OpahUsersListPresenter: OpahUsersListPresenting {
     
     func removeFooterLoading() {
         viewController?.hideFooterView()
+    }
+    
+    func presentUserDetails(name: String) {
+        AppRouter.shared.routeToUserDetails(name: name)
     }
 }

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = router.navigation
         window?.makeKeyAndVisible()
         
-        router.routeToUsersList()
+        router.routeToUserDetails(name: "mojombo")
         
         return true
     }

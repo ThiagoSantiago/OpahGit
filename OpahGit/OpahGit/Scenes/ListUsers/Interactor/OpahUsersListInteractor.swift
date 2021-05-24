@@ -14,6 +14,7 @@ protocol OpahUsersListInteracting: AnyObject {
     func resetPages()
     func stopSearching()
     func searchUser(name: String)
+    func showUserDetail(userName: String)
 }
 
 final class OpahUsersListInteractor: OpahUsersListInteracting {
@@ -91,5 +92,9 @@ final class OpahUsersListInteractor: OpahUsersListInteracting {
     func stopSearching() {
         isSearching = false
         presenter.presentUsersList(users: usersList)
+    }
+    
+    func showUserDetail(userName: String) {
+        presenter.presentUserDetails(name: userName)
     }
 }

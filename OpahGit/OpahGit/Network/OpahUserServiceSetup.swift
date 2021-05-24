@@ -1,5 +1,5 @@
 //
-//  OpahUserReposServiceSetup.swift
+//  OpahUserServiceSetup.swift
 //  OpahGit
 //
 //  Created by Thiago Santiago on 23/05/21.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum OpahUserReposServiceSetup: OpahApiSetupProtocol {
+enum OpahUserServiceSetup: OpahApiSetupProtocol {
     
-    case getUserRepos(name: String)
+    case getUser(name: String)
     
     var endpoint: String {
         switch self {
             
-        case let .getUserRepos(name):
-            let url = Constants.baseUrl+"/users/\(name)/repos"
+        case let .getUser(name):
+            let url = Constants.baseUrl+"/users/\(name)"
             
             return url
         }
@@ -27,7 +27,7 @@ enum OpahUserReposServiceSetup: OpahApiSetupProtocol {
     
     var method: HTTPMethod {
         switch self {
-        case .getUserRepos:
+        case .getUser:
             return .get
         }
     }
