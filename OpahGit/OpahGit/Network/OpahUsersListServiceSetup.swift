@@ -9,16 +9,20 @@ import Foundation
 
 enum OpahUsersListServiceSetup: OpahApiSetupProtocol {
     
-    case getUsers
+    case getUsers(page: Int)
     
     var endpoint: String {
         switch self {
-            
-        case .getUsers:
-            let url = Constants.baseUrl+"/users"
+        
+        case let .getUsers(page):
+            let url = Constants.baseUrl+"/users?page=\(page)&per_page=100"
             
             return url
         }
+    }
+    
+    var headers: [String : String] {
+        return ["Content-Type":"application/json"]
     }
     
     var method: HTTPMethod {

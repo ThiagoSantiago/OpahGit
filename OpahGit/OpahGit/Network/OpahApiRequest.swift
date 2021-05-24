@@ -30,7 +30,9 @@ class OpahApiRequest: OpahApiRequestProtocol {
         var requestData = URLRequest(url: urlRequest)
         requestData.httpMethod = request.method.rawValue
         requestData.allHTTPHeaderFields = request.headers
-        requestData.httpBody = jsonData as Data
+        if !request.parameters.isEmpty {
+            requestData.httpBody = jsonData as Data
+        }
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: requestData) { (data, response, error) in
@@ -39,13 +41,13 @@ class OpahApiRequest: OpahApiRequestProtocol {
                 completion(.failure(.unknown(error.localizedDescription)))
             }
             
-            if let returnData = String(data: data!, encoding: .utf8) {
-                print(returnData)
-            }
-            
             guard let data = data else {
                 completion(.failure(.brokenData))
                 return
+            }
+            
+            if let returnData = String(data: data, encoding: .utf8) {
+                print(returnData)
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {

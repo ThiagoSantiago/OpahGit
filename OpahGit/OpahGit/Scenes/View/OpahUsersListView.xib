@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpahUsersListView" customModule="OpahGit" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="Hdd-vp-stc" id="AGX-FI-LvM"/>
+                <outlet property="tableView" destination="xCA-HW-xMo" id="7c5-bR-mAm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="r3t-pc-pg5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-vp-stc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fIj-b0-CQq"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xCA-HW-xMo">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xCA-HW-xMo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5wI-9k-QHH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xCA-HW-xMo" secondAttribute="trailing" id="Aml-ox-2Se"/>
+                <constraint firstItem="Hdd-vp-stc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IFa-S5-yUX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xCA-HW-xMo" secondAttribute="bottom" id="QIB-Bx-ylL"/>
+                <constraint firstItem="Hdd-vp-stc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="SeA-GH-nBJ"/>
+                <constraint firstItem="Hdd-vp-stc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vx2-4E-iNc"/>
+                <constraint firstItem="xCA-HW-xMo" firstAttribute="top" secondItem="Hdd-vp-stc" secondAttribute="bottom" id="fLo-5x-Ll1"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
