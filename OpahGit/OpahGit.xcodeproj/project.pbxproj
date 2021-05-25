@@ -10,7 +10,6 @@
 		39C5A1D5265AB924004F54E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A1D4265AB924004F54E1 /* AppDelegate.swift */; };
 		39C5A1DE265AB925004F54E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A1DD265AB925004F54E1 /* Assets.xcassets */; };
 		39C5A1E1265AB925004F54E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C5A1DF265AB925004F54E1 /* LaunchScreen.storyboard */; };
-		39C5A1EC265AB925004F54E1 /* OpahGitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A1EB265AB925004F54E1 /* OpahGitTests.swift */; };
 		39C5A1F7265AB925004F54E1 /* OpahGitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A1F6265AB925004F54E1 /* OpahGitUITests.swift */; };
 		39C5A206265ABAA6004F54E1 /* OpahApiSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A205265ABAA6004F54E1 /* OpahApiSetupProtocol.swift */; };
 		39C5A208265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A207265ABD2C004F54E1 /* OpahUsersListServiceSetup.swift */; };
@@ -69,7 +68,6 @@
 		39C5A1E0265AB925004F54E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39C5A1E2265AB925004F54E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39C5A1E7265AB925004F54E1 /* OpahGitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpahGitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		39C5A1EB265AB925004F54E1 /* OpahGitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahGitTests.swift; sourceTree = "<group>"; };
 		39C5A1ED265AB925004F54E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39C5A1F2265AB925004F54E1 /* OpahGitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpahGitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C5A1F6265AB925004F54E1 /* OpahGitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahGitUITests.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			children = (
 				39C5A259265C7421004F54E1 /* UserDetail */,
 				39C5A24F265C4E18004F54E1 /* ListUsers */,
-				39C5A1EB265AB925004F54E1 /* OpahGitTests.swift */,
 				39C5A1ED265AB925004F54E1 /* Info.plist */,
 			);
 			path = OpahGitTests;
@@ -506,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				39C5A258265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift in Sources */,
-				39C5A1EC265AB925004F54E1 /* OpahGitTests.swift in Sources */,
 				39C5A25B265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift in Sources */,
 				39C5A251265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift in Sources */,
 			);

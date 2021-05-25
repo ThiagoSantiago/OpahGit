@@ -72,7 +72,7 @@ final class OpahUserDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(viewControllerMock.userRepoList?[2].description, "Brother PES file converter")
     }
     
-    func test() {
+    func testPresentUserDetail() {
         let user = UserDetail(id: 1024025,
                               login: "torvalds",
                               name: "Linus Torvalds",
