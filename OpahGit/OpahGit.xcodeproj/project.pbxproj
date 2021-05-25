@@ -40,6 +40,9 @@
 		39C5A24A265C3648004F54E1 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A249265C3648004F54E1 /* UserDetail.swift */; };
 		39C5A24C265C439D004F54E1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A24B265C439D004F54E1 /* ImageDownloader.swift */; };
 		39C5A24E265C448D004F54E1 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A24D265C448D004F54E1 /* UIImageView+Extension.swift */; };
+		39C5A251265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A250265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift */; };
+		39C5A258265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A257265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift */; };
+		39C5A25B265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5A25A265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		39C5A249265C3648004F54E1 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		39C5A24B265C439D004F54E1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		39C5A24D265C448D004F54E1 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		39C5A250265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUsersListInteractorTests.swift; sourceTree = "<group>"; };
+		39C5A257265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUsersListPresenterTests.swift; sourceTree = "<group>"; };
+		39C5A25A265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpahUserDetailsPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,8 @@
 		39C5A1EA265AB925004F54E1 /* OpahGitTests */ = {
 			isa = PBXGroup;
 			children = (
+				39C5A259265C7421004F54E1 /* UserDetail */,
+				39C5A24F265C4E18004F54E1 /* ListUsers */,
 				39C5A1EB265AB925004F54E1 /* OpahGitTests.swift */,
 				39C5A1ED265AB925004F54E1 /* Info.plist */,
 			);
@@ -313,6 +321,23 @@
 				39C5A244265C22D6004F54E1 /* OpahUserListItemTableViewCell.xib */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		39C5A24F265C4E18004F54E1 /* ListUsers */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A250265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift */,
+				39C5A257265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift */,
+			);
+			path = ListUsers;
+			sourceTree = "<group>";
+		};
+		39C5A259265C7421004F54E1 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				39C5A25A265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,7 +505,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C5A258265C5ED1004F54E1 /* OpahUsersListPresenterTests.swift in Sources */,
 				39C5A1EC265AB925004F54E1 /* OpahGitTests.swift in Sources */,
+				39C5A25B265C74E1004F54E1 /* OpahUserDetailsPresenterTests.swift in Sources */,
+				39C5A251265C4E5A004F54E1 /* OpahUsersListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
